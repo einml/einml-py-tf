@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "einml"
+version = "0.1.0"
+description = "Tensorflow utility library"
+authors = ["Max Clarke <maxeonyx@gmail.com>"]
+license = "None"
+readme = "README.md"
+packages = [{include = "einml"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.12"
+nvsmi = "^0.4"
+tensorflow = "^2.11"
+tensorflow-probability = "^0.19"
+tf-models-official = "^2.11"
+datasets = "^2.8"
+numpy = "^1.24"
+matplotlib = "^3.6"
+plotly = "^5.11"
+einops = "^0.6"
+enlighten = "^1.11"
+keras-nlp = "^0.4"
+wandb = "^0.13"
+
+python-box = "^6.1"
+randomname = "^0.1"
+icecream = "^2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

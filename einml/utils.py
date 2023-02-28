@@ -13,15 +13,9 @@ from einml.prelude import *
 
 __all__, export = exporter()
 
-from einml.run_name import get_run_name, random_run_name, set_run_name
-export("get_run_name")
-export("random_run_name")
-export("set_run_name")
 
-
-SomeFnT = TypeVar("SomeFnT", bound=Callable)
 @export
-def tf_function(f: SomeFnT, *args, **kwargs) -> SomeFnT:
+def tf_function(f: Callable, *args, **kwargs) -> Callable:
     return tf.function(f, *args, **kwargs)
 
 def list_previous_runs():
@@ -316,6 +310,7 @@ def expsteps(n, base=1.5):
         t += base**i
         i += 1
     yield n-1
+
 
 @export
 def funky_punky(n_0, n_max, n_total, base=2):

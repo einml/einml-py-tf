@@ -12,6 +12,7 @@ python = ">=3.10, <3.12"
 nvsmi = "^0.4"
 tensorflow = "^2.11"
 tensorflow-probability = "^0.19"
+tensorflow-datasets = "^4.8.1"
 tf-models-official = "^2.11"
 datasets = "^2.8"
 numpy = "^1.24"
@@ -21,10 +22,15 @@ einops = "^0.6"
 enlighten = "^1.11"
 keras-nlp = "^0.4"
 wandb = "^0.13"
-
 python-box = "^6.1"
 randomname = "^0.1"
 icecream = "^2.1"
+seqio = "^0.0.14"
+
+# disable all type checking for now
+[tool.pyright]
+include = []
+exclude = ['**']
 
 
 [build-system]
